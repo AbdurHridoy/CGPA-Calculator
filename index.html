@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header">
+            <div>
+                <p class="tag">STUDENT TOOLKIT</p>
+                <h1>CGPA Calculator</h1>
+                <p class="subtitle">
+                    Calculate your semester GPA with ease.
+                </p>
+            </div>
+
+            <div class="header-badge">🎓</div>
+        </header>
+
+        <section class="summary">
+            <div class="summary-card">
+                <p>Total Courses</p>
+                <h2 id="totalCourses">0</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Credits</p>
+                <h2 id="totalCredits">0.00</h2>
+            </div>
+
+            <div class="summary-card result-card">
+                <p>Semester GPA</p>
+                <h2 id="gpa">0.00</h2>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <div class="section-header">
+                <div>
+                    <h2>Course Details</h2>
+                    <p>Add courses and select your grade.</p>
+                </div>
+
+                <button id="addCourseBtn" class="add-btn">
+                    + Add Course
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Credit</th>
+                            <th>Grade</th>
+                            <th>Grade Point</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="courseList"></tbody>
+                </table>
+            </div>
+
+            <div class="footer">
+                <button id="resetBtn" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            Built with Electron.js
+        </footer>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
